@@ -54,5 +54,8 @@ curl -i -x PUT "http://<NameNode>:50070/webhdfs/v1/user/cloudera/mydata?op=MKDIR
 curl -i -x PUT "http://<NameNode>:50070/webhdfs/v1/user/cloudera/test?op=DELETE&recursive=True"
 
 
+# DistCP
 
-hdfs://namenode1:8020/<src1>
+hadoop distcp hdfs://<namenode1>:8020/<source> hdfs://<namenode2>:8020/<destination>
+
+hadoop distcp hdfs://<namenode1>:8020/<source1> hdfs://<namenode1>:8020/<source2> hdfs://<namenode2>:8020/<destination>
